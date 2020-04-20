@@ -63,7 +63,8 @@ import config from './config.json';
 import Nav from './components/Nav.vue';
 import Footer from './components/Footer.vue';
 import Budgets from './components/Budgets.vue';
-import Transactions from './components/Transactions.vue';
+//import Transactions from './components/Transactions.vue';
+import Categories from './components/Categories.vue';
 
 export default {
   // The data to feed our templates
@@ -79,7 +80,8 @@ export default {
       error: null,
       budgetId: null,
       budgets: [],
-      transactions: [],
+      //transactions: [],
+      categories: [],
     }
   },
   // When this component is created, check whether we need to get a token,
@@ -113,9 +115,15 @@ export default {
       this.loading = true;
       this.error = null;
       this.budgetId = id;
-      this.transactions = [];
-      this.api.transactions.getTransactions(id).then((res) => {
-        this.transactions = res.data.transactions;
+
+      this.categories = [];
+      this.api.categories.getCategories(id).then((res) => {
+          this.categories = res.data.categories;
+      //})
+
+      //this.transactions = [];
+      //this.api.transactions.getTransactions(id).then((res) => {
+      //  this.transactions = res.data.transactions;
       }).catch((err) => {
         this.error = err.error.detail;
       }).finally(() => {
@@ -160,7 +168,8 @@ export default {
     Nav,
     Footer,
     Budgets,
-    Transactions
+    Categories
+    //Transactions
   }
 }
 </script>
