@@ -1,4 +1,4 @@
 {
   "clientId": "69af5de5bdad7de49028f22e1913502dd26d3c793c1615caad075a002463e0dc",
-  "redirectUri": "http://localhost"
+  "redirectUri": "urn:ietf:wg:oauth:2.0:oob"
 }
