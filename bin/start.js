@@ -21,7 +21,7 @@ const files = [
 
 // Main
 
-console.log(chalk.green('## YNAB API Starter Kit ##'));
+console.log(chalk.green('## YNAB API Starter Kit | Craig Maughan 2020 ##'));
 copyFiles(function () {
   installDeps(function () {
     startServer()
