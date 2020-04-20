@@ -40,7 +40,8 @@
 
         <!-- If a budget has been selected, display transactions from that budget -->
         <div v-else>
-          <Transactions :transactions="transactions" />
+          <!-- <Transactions :transactions="transactions" /> -->
+          <Categories :Categories="categories" />
           <button class="btn btn-info" @click="budgetId = null">&lt; Select Another Budget</button>
         </div>
 
