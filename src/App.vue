@@ -73,7 +73,7 @@ export default {
       ynab: {
         clientId: config.clientId,
         redirectUri: config.redirectUri,
-        token: null,
+        token: 1b67cbfd958f3f9a0cc591ebcb7d9c4da05cc9a81d6e2f025f798bedd6745f58,//null,
         api: null,
       },
       loading: false,
